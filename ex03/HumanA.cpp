@@ -8,6 +8,11 @@ HumanA::~HumanA()
 {
 }
 
+void HumanA::setWeapon(Weapon& weapon)
+{
+    this->_weapon = &weapon;
+}
+
 void	HumanA::attack()
 {
 	if (this->_weapon.getType() != "")
