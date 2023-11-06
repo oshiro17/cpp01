@@ -6,7 +6,7 @@
 #    By: panti <panti@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/23 11:10:16 by panti             #+#    #+#              #
-#    Updated: 2023/09/23 14:03:14 by panti            ###   ########.fr        #
+#    Updated: 2023/11/06 21:43:11 by panti            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME	= sedv2
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
-FILES	= main SedIsForLosers
+FILES	= main Sed
 OBJS	= $(FILES:=.o)
 .PHONY: all clean re
 

@@ -1,25 +1,27 @@
-#include "SedIsForLosers.hpp"
+#include "Sed.hpp"
 
 Sed::Sed(std::string filename)
 {
 	this->_inFile = filename;
-	this->_outFile = this->_inFile + ".replace";
+	// this->_outFile = this->_inFile + ".replace";
 }
 
 Sed::~Sed()
 {
 }
 
-void	Sed::replace(std::string s1, std::string s2)
+int	Sed::replace(std::string s1, std::string s2)
 {
 	std::ifstream	ifs(this->_inFile);
 	std::string		content;
 	std::string		result = "";
 
+	
 	if (ifs)
 	{
 		size_t	start = 0;
 		size_t	found = 0;
+		this->_outFile = this->_inFile + ".replace";
 		std::getline(ifs,content,'\0');
 		found = content.find(s1);
 		while (found != std::string::npos)
@@ -35,5 +37,10 @@ void	Sed::replace(std::string s1, std::string s2)
 		ofs.close();
 		ifs.close();
 	}
-	return;
+	else
+	{
+		std::cout<<"Invalid filename"<<std::endl;
+		return (1);
+	}
+	return(0);
 }

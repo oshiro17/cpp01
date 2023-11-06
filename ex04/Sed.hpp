@@ -1,5 +1,5 @@
-#ifndef SADISFORLOSERS_HPP
-# define SADISFORLOSERS_HPP
+#ifndef SED_HPP
+# define SED_HPP
 #include <iostream>
 #include <fstream>
 class Sed
@@ -11,7 +11,6 @@ private:
 public:
     Sed( std::string filename);
     ~Sed();
-
-    void            replace( std::string s1, std::string s2);
+    int replace( std::string s1, std::string s2);
 };
 #endif
